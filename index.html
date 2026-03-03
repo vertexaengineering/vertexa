@@ -1,58 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>VERTEXA Digital Engineering</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VERTEXA Digital Engineering</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: #0A1F44;
     color: white;
+    scroll-behavior: smooth;
 }
 
 header {
-    text-align: center;
-    padding: 100px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #081733;
 }
 
-header h1 {
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #00BFFF;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero h1 {
     font-size: 48px;
     margin-bottom: 10px;
 }
 
-header p {
+.hero p {
     font-size: 20px;
     color: #00BFFF;
 }
 
 section {
-    padding: 60px 20px;
-    max-width: 1000px;
+    padding: 80px 60px;
+    max-width: 1100px;
     margin: auto;
 }
 
 h2 {
-    border-bottom: 2px solid #00BFFF;
-    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-size: 32px;
+    border-left: 4px solid #00BFFF;
+    padding-left: 10px;
 }
 
-.services, .why {
+.services, .portfolio, .why {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
 }
 
 .card {
     background-color: #122B5A;
-    padding: 20px;
-    border-radius: 8px;
+    padding: 25px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
 }
 
 footer {
     text-align: center;
-    padding: 40px 20px;
+    padding: 40px;
     background-color: #081733;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 </style>
 </head>
@@ -60,30 +102,39 @@ footer {
 <body>
 
 <header>
-    <h1>VERTEXA Digital Engineering</h1>
-    <p>Precision at Every Connection</p>
+    <div class="logo">VERTEXA<span>.</span></div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
-<section>
+<div class="hero">
+    <h1>VERTEXA Digital Engineering</h1>
+    <p>Precision at Every Connection</p>
+</div>
+
+<section id="about">
     <h2>About Us</h2>
     <p>
-        VERTEXA Digital Engineering delivers execution-ready BIM and integrated
-        coordination solutions for ARC, STR, and MEP disciplines.
-        We help contractors reduce site clashes, improve coordination efficiency,
-        and deliver constructible digital models from LOD 100–500.
+        VERTEXA Digital Engineering delivers execution-ready BIM and integrated coordination solutions 
+        for ARC, STR, and MEP disciplines. We help contractors reduce site clashes, improve coordination 
+        efficiency, and deliver constructible digital models from LOD 100–500.
     </p>
 </section>
 
-<section>
+<section id="services">
     <h2>Our Services</h2>
     <div class="services">
         <div class="card">
             <h3>Integrated BIM Modeling</h3>
-            <p>Architectural, Structural & MEP modeling (LOD 100–500).</p>
+            <p>Architectural, Structural & MEP modeling from LOD 100–500.</p>
         </div>
         <div class="card">
             <h3>Clash Detection</h3>
-            <p>Navisworks coordination and resolution reporting.</p>
+            <p>Advanced Navisworks coordination and resolution reporting.</p>
         </div>
         <div class="card">
             <h3>Shop Drawings</h3>
@@ -96,34 +147,43 @@ footer {
     </div>
 </section>
 
-<section>
-    <h2>Why VERTEXA?</h2>
-    <div class="why">
+<section id="portfolio">
+    <h2>Project Portfolio</h2>
+    <div class="portfolio">
         <div class="card">
-            <p>✔ Integrated ARC • STR • MEP Expertise</p>
+            <h3>Residential Tower Coordination</h3>
+            <p>ARC • STR • MEP coordination with full clash resolution workflow.</p>
         </div>
         <div class="card">
-            <p>✔ Precision-Driven Modeling</p>
+            <h3>Commercial Office BIM Model</h3>
+            <p>LOD 400 modeling and shop drawing extraction.</p>
         </div>
         <div class="card">
-            <p>✔ Site-Aware Coordination</p>
-        </div>
-        <div class="card">
-            <p>✔ Scalable Contractor Support</p>
+            <h3>Institutional Project Support</h3>
+            <p>Integrated digital coordination for execution phase.</p>
         </div>
     </div>
 </section>
 
-<section>
+<section id="why">
+    <h2>Why VERTEXA?</h2>
+    <div class="why">
+        <div class="card">✔ Integrated ARC • STR • MEP Expertise</div>
+        <div class="card">✔ Precision-Driven Modeling Standards</div>
+        <div class="card">✔ Site-Aware Coordination</div>
+        <div class="card">✔ Scalable Contractor Support</div>
+    </div>
+</section>
+
+<section id="contact">
     <h2>Contact</h2>
     <p>Email: vertexabim@gmail.com</p>
     <p>Location: Hyderabad, India</p>
 </section>
 
 <footer>
-    <p>© 2026 VERTEXA Digital Engineering</p>
+    © 2026 VERTEXA Digital Engineering
 </footer>
 
 </body>
-
 </html>
