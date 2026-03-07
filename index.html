@@ -39,6 +39,33 @@ nav a {
     text-decoration: none;
     font-weight: 500;
 }
+    .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #122B5A;
+    min-width: 180px;
+    border-radius: 6px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #1b3a75;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
 .hero {
     text-align: center;
@@ -103,12 +130,22 @@ footer {
 
 <header>
     <div class="logo">VERTEXA<span>.</span></div>
-    <nav>
-        <a href="#about">About</a>
+   <nav>
+    <a href="#about">About</a>
+
+    <div class="dropdown">
         <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-    </nav>
+        <div class="dropdown-content">
+            <a href="#arc">Architectural</a>
+            <a href="#str">Structural</a>
+            <a href="#mep">MEP</a>
+            <a href="#landscape">Landscape</a>
+        </div>
+    </div>
+
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+</nav>
 </header>
 
 <div class="hero">
@@ -337,5 +374,6 @@ hardscape, planting layouts, and site amenities.
 
 </body>
 </html>
+
 
 
