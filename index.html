@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -9,394 +10,210 @@
 
 <style>
 body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #0A1F44;
-    color: white;
-    scroll-behavior: smooth;
+margin: 0;
+font-family: 'Montserrat', sans-serif;
+background-color: #0A1F44;
+color: white;
+scroll-behavior: smooth;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 60px;
-    background-color: #081733;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 60px;
+background-color: #081733;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: 700;
+font-size: 24px;
+font-weight: 700;
 }
 
 .logo span {
-    color: #00BFFF;
+color: #00BFFF;
 }
 
 nav a {
-    color: white;
-    margin-left: 20px;
-    text-decoration: none;
-    font-weight: 500;
+color: white;
+margin-left: 20px;
+text-decoration: none;
+font-weight: 500;
 }
-    .dropdown {
-    position: relative;
-    display: inline-block;
+
+.dropdown {
+position: relative;
+display: inline-block;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #122B5A;
-    min-width: 180px;
-    border-radius: 6px;
+display: none;
+position: absolute;
+background-color: #122B5A;
+min-width: 180px;
+border-radius: 6px;
 }
 
 .dropdown-content a {
-    color: white;
-    padding: 10px 14px;
-    text-decoration: none;
-    display: block;
+color: white;
+padding: 10px 14px;
+text-decoration: none;
+display: block;
 }
 
 .dropdown-content a:hover {
-    background-color: #1b3a75;
+background-color: #1b3a75;
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+display: block;
 }
 
 .hero {
-    text-align: center;
-    padding: 120px 20px;
-    animation: fadeIn 2s ease-in-out;
+text-align: center;
+padding: 120px 20px;
 }
 
 .hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
+font-size: 48px;
+margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 20px;
-    color: #00BFFF;
+font-size: 20px;
+color: #00BFFF;
 }
 
 section {
-    padding: 80px 60px;
-    max-width: 1100px;
-    margin: auto;
+padding: 80px 60px;
+max-width: 1100px;
+margin: auto;
 }
 
 h2 {
-    margin-bottom: 30px;
-    font-size: 32px;
-    border-left: 4px solid #00BFFF;
-    padding-left: 10px;
+margin-bottom: 30px;
+font-size: 32px;
+border-left: 4px solid #00BFFF;
+padding-left: 10px;
 }
 
 .services, .portfolio, .why {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 25px;
 }
 
 .card {
-    background-color: #122B5A;
-    padding: 25px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+background-color: #122B5A;
+padding: 25px;
+border-radius: 10px;
+transition: transform 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-8px);
+transform: translateY(-8px);
 }
 
 footer {
-    text-align: center;
-    padding: 40px;
-    background-color: #081733;
-}
-
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+text-align: center;
+padding: 40px;
+background-color: #081733;
 }
 </style>
+
 </head>
 
 <body>
 
 <header>
-    <div class="logo">VERTEXA<span>.</span></div>
-   <nav>
-    <a href="#about">About</a>
+<div class="logo">VERTEXA<span>.</span></div>
 
-    <div class="dropdown">
-        <a href="#services">Services</a>
-        <div class="dropdown-content">
-            <a href="#arc">Architectural</a>
-            <a href="#str">Structural</a>
-            <a href="#mep">MEP</a>
-            <a href="#landscape">Landscape</a>
-        </div>
-    </div>
+<nav>
+<a href="#about">About</a>
 
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
+<div class="dropdown">
+<a href="#services">Services</a>
+<div class="dropdown-content">
+<a href="#arc">Architectural</a>
+<a href="#str">Structural</a>
+<a href="#mep">MEP</a>
+<a href="#landscape">Landscape</a>
+</div>
+</div>
+
+<a href="#portfolio">Portfolio</a> <a href="#insights">Insights</a> <a href="#contact">Contact</a>
+
 </nav>
 </header>
 
 <div class="hero">
-    <h1>VERTEXA Digital Engineering</h1>
-    <p>Precision at Every Connection</p>
+<h1>VERTEXA Digital Engineering</h1>
+<p>Precision at Every Connection</p>
 </div>
 
 <section id="about">
-    <h2>About Us</h2>
-    <p>
-        VERTEXA Digital Engineering delivers execution-ready BIM and integrated coordination solutions 
-        for ARC, STR, and MEP disciplines. We help contractors reduce site clashes, improve coordination 
-        efficiency, and deliver constructible digital models from LOD 100–500.
-    </p>
+<h2>About Us</h2>
+<p>
+VERTEXA Digital Engineering delivers execution-ready BIM and integrated coordination solutions 
+for ARC, STR, and MEP disciplines. We help contractors reduce site clashes, improve coordination 
+efficiency, and deliver constructible digital models from LOD 100–500.
+</p>
 </section>
 
 <section id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-        <div class="card">
-            <h3>Integrated BIM Modeling</h3>
-            <p>Architectural, Structural & MEP modeling from LOD 100–500.</p>
-        </div>
-        <div class="card">
-            <h3>Clash Detection</h3>
-            <p>Advanced Navisworks coordination and resolution reporting.</p>
-        </div>
-        <div class="card">
-            <h3>Shop Drawings</h3>
-            <p>Execution-ready documentation and drawing extraction.</p>
-        </div>
-        <div class="card">
-            <h3>Digital Coordination</h3>
-            <p>Constructability review and coordination workflows.</p>
-        </div>
-    </div>
+<h2>Our Services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Integrated BIM Modeling</h3>
+<p>Architectural, Structural & MEP modeling from LOD 100–500.</p>
+</div>
+
+<div class="card">
+<h3>Clash Detection</h3>
+<p>Advanced Navisworks coordination and resolution reporting.</p>
+</div>
+
+<div class="card">
+<h3>Shop Drawings</h3>
+<p>Execution-ready documentation and drawing extraction.</p>
+</div>
+
+<div class="card">
+<h3>Digital Coordination</h3>
+<p>Constructability review and coordination workflows.</p>
+</div>
+
+</div>
 </section>
 
 <section id="portfolio">
-    <h2>Project Portfolio</h2>
-    <div class="portfolio">
-        <div class="card">
-            <h3>Residential Tower Coordination</h3>
-            <p>ARC • STR • MEP coordination with full clash resolution workflow.</p>
-        </div>
-        <div class="card">
-            <h3>Commercial Office BIM Model</h3>
-            <p>LOD 400 modeling and shop drawing extraction.</p>
-        </div>
-        <div class="card">
-            <h3>Institutional Project Support</h3>
-            <p>Integrated digital coordination for execution phase.</p>
-        </div>
-    </div>
-</section>
-<section id="arc">
-<h2>Architectural BIM Modeling (ARC)</h2>
 
-<p>
-Architectural BIM modeling focuses on creating accurate digital representations
-of building layouts, spatial planning, façade elements, and architectural details.
-At VERTEXA Digital Engineering, we develop coordinated architectural models that
-support design validation, construction planning, and multidisciplinary coordination.
-</p>
-
-<p>
-Our ARC modeling process ensures alignment between design intent and constructability.
-We integrate architectural models with structural and MEP systems to identify clashes
-early and ensure smooth construction execution.
-</p>
+<h2>Project Portfolio</h2>
 
 <div class="portfolio">
 
 <div class="card">
-<img src="arc1.jpg" style="width:100%; border-radius:8px;">
-<h3>Architectural Layout Modeling</h3>
-<p>Detailed BIM modeling for walls, floors, openings, and architectural layouts.</p>
+<h3>Residential Tower Coordination</h3>
+<p>ARC • STR • MEP coordination with full clash resolution workflow.</p>
 </div>
 
 <div class="card">
-<img src="arc2.jpg" style="width:100%; border-radius:8px;">
-<h3>Façade Coordination</h3>
-<p>Integration of façade components within the BIM coordination environment.</p>
+<h3>Commercial Office BIM Model</h3>
+<p>LOD 400 modeling and shop drawing extraction.</p>
 </div>
 
 <div class="card">
-<img src="arc3.jpg" style="width:100%; border-radius:8px;">
-<h3>Architectural Coordination View</h3>
-<p>Architectural models integrated with structural and MEP systems.</p>
-</div>
-
-</div>
-</section>
-    <section id="str">
-<h2>Structural BIM Modeling (STR)</h2>
-
-<p>
-Structural BIM modeling focuses on developing accurate digital models of the
-structural framework of a building, including columns, beams, slabs, foundations,
-and reinforcement elements.
-</p>
-
-<p>
-At VERTEXA Digital Engineering, our structural models are developed to support
-coordination, analysis workflows, and construction planning. Structural BIM
-models are integrated with architectural and MEP systems to detect clashes,
-optimize structural layouts, and ensure efficient site execution.
-</p>
-
-<div class="portfolio">
-
-<div class="card">
-<img src="str1.jpg" style="width:100%; border-radius:8px;">
-<h3>Structural Frame Modeling</h3>
-<p>Detailed modeling of beams, columns, and slab systems.</p>
-</div>
-
-<div class="card">
-<img src="str2.jpg" style="width:100%; border-radius:8px;">
-<h3>Reinforcement Coordination</h3>
-<p>Structural modeling aligned with reinforcement and coordination requirements.</p>
-</div>
-
-<div class="card">
-<img src="str3.jpg" style="width:100%; border-radius:8px;">
-<h3>Structural Coordination</h3>
-<p>Integrated coordination between structural and MEP systems.</p>
-</div>
-
-</div>
-</section>
-    <section id="mep">
-<h2>MEP BIM Modeling (Mechanical • Electrical • Plumbing)</h2>
-
-<p>
-MEP BIM modeling focuses on the coordination and integration of mechanical,
-electrical, and plumbing systems within the building environment. These
-systems are critical for the operational functionality of modern buildings.
-</p>
-
-<p>
-At VERTEXA Digital Engineering, we develop coordinated MEP models that
-ensure proper routing of ducts, pipes, cable trays, and equipment while
-avoiding clashes with architectural and structural components.
-</p>
-
-<div class="portfolio">
-
-<div class="card">
-<img src="mep1.jpg" style="width:100%; border-radius:8px;">
-<h3>Mechanical System Coordination</h3>
-<p>HVAC duct routing and equipment coordination within BIM models.</p>
-</div>
-
-<div class="card">
-<img src="mep2.jpg" style="width:100%; border-radius:8px;">
-<h3>Electrical Routing</h3>
-<p>Cable trays, conduits, and electrical system modeling for coordination.</p>
-</div>
-
-<div class="card">
-<img src="mep3.jpg" style="width:100%; border-radius:8px;">
-<h3>Plumbing System Modeling</h3>
-<p>Pipe routing and plumbing systems integrated with other disciplines.</p>
-</div>
-
-</div>
-</section>
-    <section id="landscape">
-<h2>Landscape Design & BIM Integration</h2>
-
-<p>
-Landscape design plays an important role in shaping the outdoor environment
-of a project. Through BIM workflows, landscape elements can be integrated
-with the architectural and site development models.
-</p>
-
-<p>
-At VERTEXA Digital Engineering, landscape models support site planning,
-grading studies, and visualization of external environments including
-hardscape, planting layouts, and site amenities.
-</p>
-
-<div class="portfolio">
-
-<div class="card">
-<img src="land1.jpg" style="width:100%; border-radius:8px;">
-<h3>Site Landscape Layout</h3>
-<p>Landscape layout including pathways, green spaces, and outdoor amenities.</p>
-</div>
-
-<div class="card">
-<img src="land2.jpg" style="width:100%; border-radius:8px;">
-<h3>Site Visualization</h3>
-<p>Integration of landscape design within the project environment.</p>
-</div>
-
-<div class="card">
-<img src="land3.jpg" style="width:100%; border-radius:8px;">
-<h3>Outdoor Environment Planning</h3>
-<p>Planning of landscape features with site infrastructure.</p>
-</div>
-
-</div>
-</section>
-    <section id="insights">
-
-<h2>Engineering Insights</h2>
-
-<p>
-Explore our knowledge resources covering modern BIM workflows,
-digital engineering practices, and coordination strategies
-used in contemporary construction projects.
-</p>
-
-<div class="portfolio">
-
-<div class="card">
-<h3>Architectural BIM Workflows</h3>
-<p>Modern architectural BIM modeling strategies and design coordination.</p>
-<a href="arc-modern-bim.pdf" target="_blank">View Presentation</a>
-</div>
-
-<div class="card">
-<h3>Structural BIM Coordination</h3>
-<p>Structural modeling and coordination approaches for modern projects.</p>
-<a href="structural-bim-coordination.pdf" target="_blank">View Presentation</a>
-</div>
-
-<div class="card">
-<h3>MEP Clash Detection</h3>
-<p>Clash detection and coordination workflows for building systems.</p>
-<a href="mep-clash-detection.pdf" target="_blank">View Presentation</a>
-</div>
-
-<div class="card">
-<h3>Façade Engineering</h3>
-<p>Design and coordination of modern façade systems.</p>
-<a href="facade-engineering-design.pdf" target="_blank">View Presentation</a>
-</div>
-
-<div class="card">
-<h3>Landscape Design Strategies</h3>
-<p>Landscape planning and sustainable outdoor environments.</p>
-<a href="landscape-design-strategy.pdf" target="_blank">View Presentation</a>
+<h3>Institutional Project Support</h3>
+<p>Integrated digital coordination for execution phase.</p>
 </div>
 
 </div>
 
 </section>
-   <section id="insights">
+
+<section id="insights">
 
 <h2>Engineering Insights</h2>
 
@@ -441,31 +258,16 @@ today's construction projects.
 </div>
 
 </section>
-    
-<section id="why">
-    <h2>Why VERTEXA?</h2>
-    <div class="why">
-        <div class="card">✔ Integrated ARC • STR • MEP Expertise</div>
-        <div class="card">✔ Precision-Driven Modeling Standards</div>
-        <div class="card">✔ Site-Aware Coordination</div>
-        <div class="card">✔ Scalable Contractor Support</div>
-    </div>
-</section>
 
 <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: vertexabim@gmail.com</p>
-    <p>Location: Hyderabad, India</p>
+<h2>Contact</h2>
+<p>Email: vertexabim@gmail.com</p>
+<p>Location: Hyderabad, India</p>
 </section>
 
 <footer>
-    © 2026 VERTEXA Digital Engineering
+© 2026 VERTEXA Digital Engineering
 </footer>
 
 </body>
 </html>
-
-
-
-
-
