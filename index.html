@@ -16,17 +16,24 @@ background:#0A1F44;
 color:white;
 scroll-behavior:smooth;
 }
+  .portfolio-highlight{
+display:grid;
+grid-template-columns:1fr;
+gap:40px;
+margin-top:40px;
+}
 
-/* HEADER */
+.portfolio-highlight h3{
+color:#00BFFF;
+margin-bottom:10px;
+}
+
 header{
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 60px;
 background:#081733;
-position:sticky;
-top:0;
-z-index:1000;
 }
 
 .logo{
@@ -36,11 +43,6 @@ font-weight:700;
 
 .logo span{
 color:#00BFFF;
-}
-
-nav{
-display:flex;
-align-items:center;
 }
 
 nav a{
@@ -58,45 +60,49 @@ background:#00BFFF;
 color:#081733;
 }
 
-/* DROPDOWN */
 .dropdown{
 position:relative;
+display:inline-block;
 }
 
 .dropdown-content{
 display:none;
 position:absolute;
 background:#122B5A;
+min-width:180px;
 border-radius:6px;
-top:35px;
 }
 
 .dropdown-content a{
+color:white;
+padding:10px 14px;
 display:block;
-padding:10px;
+text-decoration:none;
+}
+
+.dropdown-content a:hover{
+background:#1b3a75;
 }
 
 .dropdown:hover .dropdown-content{
 display:block;
 }
 
-/* HERO */
 .hero{
 text-align:center;
-padding:140px 20px;
-background:linear-gradient(#0A1F44,#081733);
+padding:120px 20px;
 }
 
 .hero h1{
 font-size:48px;
+margin-bottom:10px;
 }
 
 .hero p{
-color:#00BFFF;
 font-size:20px;
+color:#00BFFF;
 }
 
-/* SECTION */
 section{
 padding:80px 60px;
 max-width:1100px;
@@ -104,12 +110,13 @@ margin:auto;
 }
 
 h2{
+margin-bottom:30px;
+font-size:32px;
 border-left:4px solid #00BFFF;
 padding-left:10px;
 }
 
-/* CARDS */
-.services,.portfolio,.workflow{
+.services,.portfolio,.why{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
@@ -117,44 +124,63 @@ gap:25px;
 
 .card{
 background:#122B5A;
-padding:20px;
+padding:25px;
 border-radius:10px;
-transition:0.3s;
+transition:transform .3s;
 }
 
-.card:hover{
-transform:translateY(-6px);
-border:1px solid #00BFFF;
+  .card{
+background:#122B5A;
+padding:25px;
+border-radius:10px;
+transition:transform .3s;
 }
 
-/* PDF BUTTON */
 .card a{
 display:inline-block;
-margin-top:10px;
-padding:8px 14px;
+margin-top:12px;
+padding:8px 16px;
 background:#00BFFF;
 color:#081733;
 border-radius:6px;
+font-size:14px;
+font-weight:600;
 text-decoration:none;
 }
 
 .card a:hover{
 background:#33ccff;
+transform:scale(1.05);
+}
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+border:1px solid #00BFFF;
 }
 
-/* CONTACT BUTTON */
+footer{
+text-align:center;
+padding:40px;
+background:#081733;
+}
 .contact-btn{
 display:inline-block;
 margin-top:20px;
 padding:12px 24px;
 background:#00BFFF;
-border-radius:6px;
-text-decoration:none;
 color:white;
+text-decoration:none;
+border-radius:6px;
+font-weight:600;
+transition:0.3s;
 }
 
-/* MOBILE */
-@media(max-width:768px){
+.contact-btn:hover{
+background:#009acd;
+transform:translateY(-2px);
+}
+  /* MOBILE RESPONSIVE FIX */
+@media (max-width: 768px){
 
 header{
 flex-direction:column;
@@ -163,28 +189,59 @@ padding:20px;
 }
 
 nav{
-flex-wrap:wrap;
 margin-top:10px;
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+nav a{
+margin:0;
+font-size:14px;
+}
+
+.hero{
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.hero p{
+font-size:16px;
 }
 
 section{
 padding:60px 20px;
 }
 
+h2{
+font-size:26px;
 }
 
-footer{
-text-align:center;
-padding:40px;
-background:#081733;
+.services,
+.portfolio,
+.why{
+grid-template-columns:1fr;
 }
 
+.card{
+padding:20px;
+}
+
+.contact-form{
+width:100%;
+}
+
+}
 </style>
 </head>
 
 <body>
 
 <header>
+
 <div class="logo">VERTEXA<span>.</span></div>
 
 <nav>
@@ -202,11 +259,12 @@ background:#081733;
 </div>
 
 <a href="#portfolio">Portfolio</a>
-<a href="#workflow">Workflow</a>
+<a href="#case-studies">Case Studies</a>
 <a href="#insights">Insights</a>
 <a href="#contact">Contact</a>
 
 </nav>
+
 </header>
 
 <div class="hero">
@@ -214,71 +272,229 @@ background:#081733;
 <p>Precision at Every Connection</p>
 </div>
 
+<section id="about">
+
+<h2>About Us</h2>
+
+<p>
+VERTEXA Digital Engineering delivers execution-ready BIM and integrated coordination solutions 
+for ARC, STR, and MEP disciplines. We help contractors reduce site clashes, improve coordination 
+efficiency, and deliver constructible digital models from LOD 100–500.
+</p>
+
+</section>
+
 <section id="services">
+
 <h2>Our Services</h2>
+
 <div class="services">
-<div class="card"><h3>Integrated BIM Modeling</h3></div>
-<div class="card"><h3>Clash Detection</h3></div>
-<div class="card"><h3>Shop Drawings</h3></div>
-<div class="card"><h3>Digital Coordination</h3></div>
-</div>
-</section>
 
-<section id="workflow">
-<h2>BIM Workflow</h2>
-<div class="workflow">
-<div class="card">01 Review</div>
-<div class="card">02 Modeling</div>
-<div class="card">03 Clash Detection</div>
-<div class="card">04 Coordination</div>
-<div class="card">05 Drawings</div>
-<div class="card">06 Support</div>
+<div class="card">
+<h3>Integrated BIM Modeling</h3>
+<p>Architectural, Structural & MEP modeling from LOD 100–500.</p>
 </div>
 
-<img src="images/bim-workflow.png" style="width:100%; margin-top:30px; border-radius:10px;">
+<div class="card">
+<h3>Clash Detection</h3>
+<p>Advanced Navisworks coordination and resolution reporting.</p>
+</div>
+
+<div class="card">
+<h3>Shop Drawings</h3>
+<p>Execution-ready documentation and drawing extraction.</p>
+</div>
+
+<div class="card">
+<h3>Digital Coordination</h3>
+<p>Constructability review and coordination workflows.</p>
+</div>
+
+</div>
+
 </section>
 
-<section id="insights">
-<h2>Engineering Insights</h2>
+<section id="portfolio">
+
+<h2>Project Portfolio</h2>
+
+<p>
+Selected BIM coordination projects demonstrating our expertise in
+integrated modeling, clash detection, and construction support.
+</p>
+
+<div class="portfolio-highlight">
+
+<div>
+<h3>Residential Tower Coordination</h3>
+<p>
+Full ARC–STR–MEP coordination model developed to resolve clashes
+between HVAC systems and structural elements before construction.
+</p>
+</div>
+
+<div>
+<h3>Commercial Office BIM Model</h3>
+<p>
+LOD 400 BIM model developed for coordinated shop drawing extraction
+and construction documentation.
+</p>
+</div>
+
+<div>
+<h3>Institutional Facility BIM Support</h3>
+<p>
+Integrated digital coordination across disciplines to improve
+installation efficiency and site coordination.
+</p>
+</div>
+
+</div>
+
+</section>
+  <section id="case-studies">
+
+<h2>Project Case Studies</h2>
+
+<p>
+Real-world examples demonstrating how BIM coordination improves
+constructability, reduces site conflicts, and enhances project delivery.
+</p>
 
 <div class="portfolio">
 
 <div class="card">
-<h3>ARC</h3>
-<a href="./presentations/arc-bim.pdf">View</a>
+<h3>Residential Tower Coordination</h3>
+<p><b>Challenge:</b> MEP ducts clashing with structural beams.</p>
+<p><b>Solution:</b> Integrated ARC–STR–MEP coordination using Navisworks.</p>
+<p><b>Result:</b> 120+ clashes resolved before construction.</p>
 </div>
 
 <div class="card">
-<h3>STR</h3>
-<a href="./presentations/structural-bim.pdf">View</a>
+<h3>Commercial Office Building</h3>
+<p><b>Challenge:</b> Complex ceiling routing for HVAC and cable trays.</p>
+<p><b>Solution:</b> BIM coordination model and clash detection workflow.</p>
+<p><b>Result:</b> Optimized routing and reduced rework during installation.</p>
 </div>
 
 <div class="card">
-<h3>MEP</h3>
-<a href="./presentations/mep-coordination.pdf">View</a>
-</div>
-
-<div class="card">
-<h3>FACADE</h3>
-<a href="./presentations/facade-design.pdf">View</a>
-</div>
-
-<div class="card">
-<h3>LANDSCAPE</h3>
-<a href="./presentations/landscape-design.pdf">View</a>
+<h3>Institutional Facility</h3>
+<p><b>Challenge:</b> Coordination conflicts between structure and plumbing systems.</p>
+<p><b>Solution:</b> Detailed BIM modeling with coordinated layouts.</p>
+<p><b>Result:</b> Improved installation efficiency and coordination clarity.</p>
 </div>
 
 </div>
 
 </section>
+  <section id="workflow">
+
+<h2>BIM Coordination Workflow</h2>
+
+<p>
+Our structured BIM workflow ensures efficient coordination,
+accurate modeling, and smooth construction execution.
+</p>
+
+<div class="portfolio">
+
+<div class="card">
+<h3>01 Design Model Review</h3>
+<p>Review architectural, structural, and MEP design models to understand project requirements.</p>
+</div>
+
+<div class="card">
+<h3>02 BIM Modeling</h3>
+<p>Develop coordinated BIM models across ARC, STR, and MEP disciplines.</p>
+</div>
+
+<div class="card">
+<h3>03 Clash Detection</h3>
+<p>Perform clash detection using Navisworks to identify coordination conflicts.</p>
+</div>
+
+<div class="card">
+<h3>04 Coordination Resolution</h3>
+<p>Resolve clashes and optimize system layouts for construction feasibility.</p>
+</div>
+
+<div class="card">
+<h3>05 Shop Drawing Extraction</h3>
+<p>Generate construction-ready drawings from the coordinated BIM model.</p>
+</div>
+
+<div class="card">
+<h3>06 Construction Support</h3>
+<p>Provide coordination support during construction and update BIM models when required.</p>
+</div>
+
+</div>
+
+</section>
+  <img src="images/bim-workflow.png" style="width:100%; margin-top:30px; border-radius:10px;">
+
+<section id="insights">
+
+<h2>Engineering Insights</h2>
+
+<p>
+Explore our knowledge resources covering modern BIM workflows,
+digital engineering strategies, and coordination methods used in
+today's construction projects.
+</p>
+
+<div class="portfolio">
+
+<div class="card">
+<h3>Architectural BIM Workflows</h3>
+<p>Modern architectural BIM modeling strategies and design coordination.</p>
+<a href="./presentations/arc-bim.pdf" target="_blank">📄 View Presentation</a>
+</div>
+
+<div class="card">
+<h3>Structural BIM Coordination</h3>
+<p>Structural engineering workflows and BIM integration.</p>
+<a href="./presentations/structural-bim.pdf" target="_blank">📄 View Presentation</a>
+</div>
+
+<div class="card">
+<h3>MEP Coordination</h3>
+<p>MEP system coordination and clash detection techniques.</p>
+<a href="./presentations/mep-coordination.pdf" target="_blank">📄 View Presentation</a>
+</div>
+
+<div class="card">
+<h3>Façade Engineering Concepts</h3>
+<p>Modern façade design approaches for high-rise buildings.</p>
+<a href="./presentations/facade-design.pdf" target="_blank">📄 View Presentation</a>
+</div>
+
+<div class="card">
+<h3>Landscape Design Strategies</h3>
+<p>Urban landscape planning and outdoor environment design.</p>
+<a href="./presentations/landscape-design.pdf" target="_blank">📄 View Presentation</a>
+</div>
+  
+</section>
 
 <section id="contact">
+
 <h2>Contact</h2>
 
 <p>Email: vertexabim@gmail.com</p>
+<p>Location: Hyderabad, India</p>
 
-<a href="https://mail.google.com/mail/?view=cm&fs=1&to=bimacerevit@gmail.com"
-target="_blank"
+<br>
+
+<h3>Feedback</h3>
+
+<p>
+If you have questions about BIM coordination, project collaboration,
+or technical discussions, feel free to send us your feedback.
+</p>
+
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=bimacerevit@gmail.com" 
+target="_blank" 
 class="contact-btn">
 Send Feedback
 </a>
@@ -286,8 +502,22 @@ Send Feedback
 </section>
 
 <footer>
+
 © 2026 VERTEXA Digital Engineering
+
 </footer>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
