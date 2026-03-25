@@ -40,11 +40,12 @@ color:#00BFFF;
 
 nav{
 display:flex;
-gap:20px;
+align-items:center;
 }
 
 nav a{
 color:white;
+margin-left:20px;
 text-decoration:none;
 font-weight:500;
 padding:6px 10px;
@@ -57,31 +58,42 @@ background:#00BFFF;
 color:#081733;
 }
 
-/* HERO PREMIUM */
+/* DROPDOWN */
+.dropdown{
+position:relative;
+}
+
+.dropdown-content{
+display:none;
+position:absolute;
+background:#122B5A;
+border-radius:6px;
+top:35px;
+}
+
+.dropdown-content a{
+display:block;
+padding:10px;
+}
+
+.dropdown:hover .dropdown-content{
+display:block;
+}
+
+/* HERO */
 .hero{
 text-align:center;
 padding:140px 20px;
-background:linear-gradient(180deg,#0A1F44,#081733);
+background:linear-gradient(#0A1F44,#081733);
 }
 
 .hero h1{
-font-size:54px;
-margin-bottom:10px;
+font-size:48px;
 }
 
 .hero p{
-font-size:20px;
 color:#00BFFF;
-margin-bottom:30px;
-}
-
-.hero-btn{
-padding:14px 28px;
-background:#00BFFF;
-color:white;
-border-radius:6px;
-text-decoration:none;
-font-weight:600;
+font-size:20px;
 }
 
 /* SECTION */
@@ -92,13 +104,12 @@ margin:auto;
 }
 
 h2{
-font-size:32px;
 border-left:4px solid #00BFFF;
 padding-left:10px;
 }
 
-/* SERVICES */
-.services{
+/* CARDS */
+.services,.portfolio,.workflow{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
@@ -106,77 +117,44 @@ gap:25px;
 
 .card{
 background:#122B5A;
-padding:25px;
-border-radius:10px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 10px 25px rgba(0,0,0,0.4);
-border:1px solid #00BFFF;
-}
-
-/* PORTFOLIO CLEAN */
-.portfolio-highlight{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
-margin-top:30px;
-}
-
-.portfolio-highlight div{
-background:#122B5A;
 padding:20px;
 border-radius:10px;
 transition:0.3s;
 }
 
-.portfolio-highlight div:hover{
-transform:translateY(-5px);
+.card:hover{
+transform:translateY(-6px);
 border:1px solid #00BFFF;
 }
 
-/* WORKFLOW */
-.workflow{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-/* INSIGHTS BUTTON */
-.pdf-btn{
+/* PDF BUTTON */
+.card a{
 display:inline-block;
 margin-top:10px;
-padding:8px 16px;
+padding:8px 14px;
 background:#00BFFF;
+color:#081733;
 border-radius:6px;
 text-decoration:none;
-color:white;
-font-size:14px;
 }
 
-/* CONTACT */
+.card a:hover{
+background:#33ccff;
+}
+
+/* CONTACT BUTTON */
 .contact-btn{
 display:inline-block;
 margin-top:20px;
 padding:12px 24px;
 background:#00BFFF;
-color:white;
-text-decoration:none;
 border-radius:6px;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:40px;
-background:#081733;
-margin-top:40px;
+text-decoration:none;
+color:white;
 }
 
 /* MOBILE */
-@media (max-width:768px){
+@media(max-width:768px){
 
 header{
 flex-direction:column;
@@ -186,20 +164,19 @@ padding:20px;
 
 nav{
 flex-wrap:wrap;
-}
-
-.hero h1{
-font-size:32px;
+margin-top:10px;
 }
 
 section{
 padding:60px 20px;
 }
 
-.portfolio-highlight{
-grid-template-columns:1fr;
 }
 
+footer{
+text-align:center;
+padding:40px;
+background:#081733;
 }
 
 </style>
@@ -211,93 +188,51 @@ grid-template-columns:1fr;
 <div class="logo">VERTEXA<span>.</span></div>
 
 <nav>
+
 <a href="#about">About</a>
+
+<div class="dropdown">
 <a href="#services">Services</a>
+<div class="dropdown-content">
+<a href="#arc">Architectural</a>
+<a href="#str">Structural</a>
+<a href="#mep">MEP</a>
+<a href="#landscape">Landscape</a>
+</div>
+</div>
+
 <a href="#portfolio">Portfolio</a>
 <a href="#workflow">Workflow</a>
 <a href="#insights">Insights</a>
 <a href="#contact">Contact</a>
+
 </nav>
 </header>
 
-<!-- HERO -->
 <div class="hero">
 <h1>VERTEXA Digital Engineering</h1>
 <p>Precision at Every Connection</p>
-<a href="#contact" class="hero-btn">Start a Project</a>
 </div>
-
-<section id="about">
-<h2>About Us</h2>
-<p>
-We deliver execution-ready BIM solutions for ARC, STR, and MEP disciplines,
-ensuring clash-free construction and seamless coordination from design to site.
-</p>
-</section>
 
 <section id="services">
 <h2>Our Services</h2>
-
 <div class="services">
-
-<div class="card">
-<h3>Integrated BIM Modeling</h3>
-<p>LOD 100–500 modeling across all disciplines.</p>
-</div>
-
-<div class="card">
-<h3>Clash Detection</h3>
-<p>Navisworks coordination and reporting.</p>
-</div>
-
-<div class="card">
-<h3>Shop Drawings</h3>
-<p>Execution-ready drawings for site.</p>
-</div>
-
-<div class="card">
-<h3>Digital Coordination</h3>
-<p>Constructability-focused workflows.</p>
-</div>
-
-</div>
-</section>
-
-<section id="portfolio">
-<h2>Project Portfolio</h2>
-
-<div class="portfolio-highlight">
-
-<div>
-<h3>🏢 Residential Tower</h3>
-<p>Full coordination with clash resolution.</p>
-</div>
-
-<div>
-<h3>🏢 Commercial Office</h3>
-<p>LOD 400 BIM & shop drawings.</p>
-</div>
-
-<div>
-<h3>🏢 Institutional Facility</h3>
-<p>Integrated execution support.</p>
-</div>
-
+<div class="card"><h3>Integrated BIM Modeling</h3></div>
+<div class="card"><h3>Clash Detection</h3></div>
+<div class="card"><h3>Shop Drawings</h3></div>
+<div class="card"><h3>Digital Coordination</h3></div>
 </div>
 </section>
 
 <section id="workflow">
 <h2>BIM Workflow</h2>
-
 <div class="workflow">
-
-<div class="card"><h3>01 Review</h3></div>
-<div class="card"><h3>02 Modeling</h3></div>
-<div class="card"><h3>03 Clash Detection</h3></div>
-<div class="card"><h3>04 Coordination</h3></div>
-<div class="card"><h3>05 Drawings</h3></div>
-<div class="card"><h3>06 Support</h3></div>
-
+<div class="card">01 Review</div>
+<div class="card">02 Modeling</div>
+<div class="card">03 Clash Detection</div>
+<div class="card">04 Coordination</div>
+<div class="card">05 Drawings</div>
+<div class="card">06 Support</div>
 </div>
 
 <img src="images/bim-workflow.png" style="width:100%; margin-top:30px; border-radius:10px;">
@@ -306,26 +241,31 @@ ensuring clash-free construction and seamless coordination from design to site.
 <section id="insights">
 <h2>Engineering Insights</h2>
 
-<div class="services">
+<div class="portfolio">
 
 <div class="card">
-<h3>Architectural BIM</h3>
-<a href="./presentations/arc-bim.pdf" target="_blank" class="pdf-btn">📄 View</a>
+<h3>ARC</h3>
+<a href="./presentations/arc-bim.pdf">View</a>
 </div>
 
 <div class="card">
-<h3>Structural BIM</h3>
-<a href="./presentations/structural-bim.pdf" target="_blank" class="pdf-btn">📄 View</a>
+<h3>STR</h3>
+<a href="./presentations/structural-bim.pdf">View</a>
 </div>
 
 <div class="card">
-<h3>MEP Coordination</h3>
-<a href="./presentations/mep-coordination.pdf" target="_blank" class="pdf-btn">📄 View</a>
+<h3>MEP</h3>
+<a href="./presentations/mep-coordination.pdf">View</a>
 </div>
 
 <div class="card">
-<h3>Facade Engineering</h3>
-<a href="./presentations/facade-design.pdf" target="_blank" class="pdf-btn">📄 View</a>
+<h3>FACADE</h3>
+<a href="./presentations/facade-design.pdf">View</a>
+</div>
+
+<div class="card">
+<h3>LANDSCAPE</h3>
+<a href="./presentations/landscape-design.pdf">View</a>
 </div>
 
 </div>
@@ -336,7 +276,6 @@ ensuring clash-free construction and seamless coordination from design to site.
 <h2>Contact</h2>
 
 <p>Email: vertexabim@gmail.com</p>
-<p>Location: Hyderabad</p>
 
 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bimacerevit@gmail.com"
 target="_blank"
