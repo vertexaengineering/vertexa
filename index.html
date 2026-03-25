@@ -24,6 +24,9 @@ justify-content:space-between;
 align-items:center;
 padding:20px 60px;
 background:#081733;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 .logo{
@@ -37,12 +40,11 @@ color:#00BFFF;
 
 nav{
 display:flex;
-align-items:center;
+gap:20px;
 }
 
 nav a{
 color:white;
-margin-left:20px;
 text-decoration:none;
 font-weight:500;
 padding:6px 10px;
@@ -55,19 +57,31 @@ background:#00BFFF;
 color:#081733;
 }
 
-/* HERO */
+/* HERO PREMIUM */
 .hero{
 text-align:center;
-padding:120px 20px;
+padding:140px 20px;
+background:linear-gradient(180deg,#0A1F44,#081733);
 }
 
 .hero h1{
-font-size:48px;
+font-size:54px;
+margin-bottom:10px;
 }
 
 .hero p{
 font-size:20px;
 color:#00BFFF;
+margin-bottom:30px;
+}
+
+.hero-btn{
+padding:14px 28px;
+background:#00BFFF;
+color:white;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
 }
 
 /* SECTION */
@@ -103,7 +117,7 @@ box-shadow:0 10px 25px rgba(0,0,0,0.4);
 border:1px solid #00BFFF;
 }
 
-/* PORTFOLIO CLEAN (NO HEAVY BOXES) */
+/* PORTFOLIO CLEAN */
 .portfolio-highlight{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -130,7 +144,19 @@ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
-/* BUTTON */
+/* INSIGHTS BUTTON */
+.pdf-btn{
+display:inline-block;
+margin-top:10px;
+padding:8px 16px;
+background:#00BFFF;
+border-radius:6px;
+text-decoration:none;
+color:white;
+font-size:14px;
+}
+
+/* CONTACT */
 .contact-btn{
 display:inline-block;
 margin-top:20px;
@@ -146,9 +172,10 @@ footer{
 text-align:center;
 padding:40px;
 background:#081733;
+margin-top:40px;
 }
 
-/* MOBILE FIX */
+/* MOBILE */
 @media (max-width:768px){
 
 header{
@@ -159,21 +186,10 @@ padding:20px;
 
 nav{
 flex-wrap:wrap;
-gap:10px;
-margin-top:10px;
-}
-
-nav a{
-margin:0;
-font-size:14px;
 }
 
 .hero h1{
 font-size:32px;
-}
-
-.hero p{
-font-size:16px;
 }
 
 section{
@@ -199,20 +215,23 @@ grid-template-columns:1fr;
 <a href="#services">Services</a>
 <a href="#portfolio">Portfolio</a>
 <a href="#workflow">Workflow</a>
+<a href="#insights">Insights</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
 
+<!-- HERO -->
 <div class="hero">
 <h1>VERTEXA Digital Engineering</h1>
 <p>Precision at Every Connection</p>
+<a href="#contact" class="hero-btn">Start a Project</a>
 </div>
 
 <section id="about">
 <h2>About Us</h2>
 <p>
-VERTEXA Digital Engineering delivers execution-ready BIM solutions for ARC, STR, and MEP disciplines.
-We help reduce clashes, improve coordination, and deliver constructible models from LOD 100–500.
+We deliver execution-ready BIM solutions for ARC, STR, and MEP disciplines,
+ensuring clash-free construction and seamless coordination from design to site.
 </p>
 </section>
 
@@ -220,27 +239,28 @@ We help reduce clashes, improve coordination, and deliver constructible models f
 <h2>Our Services</h2>
 
 <div class="services">
+
 <div class="card">
 <h3>Integrated BIM Modeling</h3>
-<p>ARC, STR & MEP modeling from LOD 100–500.</p>
+<p>LOD 100–500 modeling across all disciplines.</p>
 </div>
 
 <div class="card">
 <h3>Clash Detection</h3>
-<p>Navisworks coordination & reporting.</p>
+<p>Navisworks coordination and reporting.</p>
 </div>
 
 <div class="card">
 <h3>Shop Drawings</h3>
-<p>Execution-ready drawings.</p>
+<p>Execution-ready drawings for site.</p>
 </div>
 
 <div class="card">
 <h3>Digital Coordination</h3>
-<p>Constructability workflows.</p>
-</div>
+<p>Constructability-focused workflows.</p>
 </div>
 
+</div>
 </section>
 
 <section id="portfolio">
@@ -250,17 +270,17 @@ We help reduce clashes, improve coordination, and deliver constructible models f
 
 <div>
 <h3>🏢 Residential Tower</h3>
-<p>Full ARC–STR–MEP coordination with clash resolution.</p>
+<p>Full coordination with clash resolution.</p>
 </div>
 
 <div>
 <h3>🏢 Commercial Office</h3>
-<p>LOD 400 model & shop drawings.</p>
+<p>LOD 400 BIM & shop drawings.</p>
 </div>
 
 <div>
-<h3>🏢 Institutional Project</h3>
-<p>Integrated BIM coordination for execution.</p>
+<h3>🏢 Institutional Facility</h3>
+<p>Integrated execution support.</p>
 </div>
 
 </div>
@@ -271,35 +291,12 @@ We help reduce clashes, improve coordination, and deliver constructible models f
 
 <div class="workflow">
 
-<div class="card">
-<h3>01 Review</h3>
-<p>Understand design inputs.</p>
-</div>
-
-<div class="card">
-<h3>02 Modeling</h3>
-<p>Develop BIM models.</p>
-</div>
-
-<div class="card">
-<h3>03 Clash Detection</h3>
-<p>Identify conflicts.</p>
-</div>
-
-<div class="card">
-<h3>04 Coordination</h3>
-<p>Resolve clashes.</p>
-</div>
-
-<div class="card">
-<h3>05 Drawings</h3>
-<p>Generate shop drawings.</p>
-</div>
-
-<div class="card">
-<h3>06 Support</h3>
-<p>Site coordination.</p>
-</div>
+<div class="card"><h3>01 Review</h3></div>
+<div class="card"><h3>02 Modeling</h3></div>
+<div class="card"><h3>03 Clash Detection</h3></div>
+<div class="card"><h3>04 Coordination</h3></div>
+<div class="card"><h3>05 Drawings</h3></div>
+<div class="card"><h3>06 Support</h3></div>
 
 </div>
 
@@ -313,22 +310,22 @@ We help reduce clashes, improve coordination, and deliver constructible models f
 
 <div class="card">
 <h3>Architectural BIM</h3>
-<a href="./presentations/arc-bim.pdf" target="_blank">📄 View</a>
+<a href="./presentations/arc-bim.pdf" target="_blank" class="pdf-btn">📄 View</a>
 </div>
 
 <div class="card">
 <h3>Structural BIM</h3>
-<a href="./presentations/structural-bim.pdf" target="_blank">📄 View</a>
+<a href="./presentations/structural-bim.pdf" target="_blank" class="pdf-btn">📄 View</a>
 </div>
 
 <div class="card">
 <h3>MEP Coordination</h3>
-<a href="./presentations/mep-coordination.pdf" target="_blank">📄 View</a>
+<a href="./presentations/mep-coordination.pdf" target="_blank" class="pdf-btn">📄 View</a>
 </div>
 
 <div class="card">
 <h3>Facade Engineering</h3>
-<a href="./presentations/facade-design.pdf" target="_blank">📄 View</a>
+<a href="./presentations/facade-design.pdf" target="_blank" class="pdf-btn">📄 View</a>
 </div>
 
 </div>
@@ -340,8 +337,6 @@ We help reduce clashes, improve coordination, and deliver constructible models f
 
 <p>Email: vertexabim@gmail.com</p>
 <p>Location: Hyderabad</p>
-
-<h3>Feedback</h3>
 
 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bimacerevit@gmail.com"
 target="_blank"
