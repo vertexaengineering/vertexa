@@ -212,6 +212,56 @@ display:flex;
 }
 
 }
+  /* FADE-IN ANIMATION */
+
+.fade-in{
+opacity:0;
+transform:translateY(30px);
+transition:all 0.8s ease;
+}
+
+.fade-in.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* HOVER GLOW EFFECT */
+
+.card{
+transition: all 0.3s ease;
+}
+
+.card:hover{
+transform: translateY(-10px) scale(1.02);
+box-shadow: 0 10px 30px rgba(0,191,255,0.3);
+}
+
+/* BUTTON STYLE */
+
+a{
+transition: all 0.3s ease;
+}
+
+a:hover{
+color:#00BFFF;
+}
+
+/* CTA BUTTON */
+
+.button{
+display:inline-block;
+padding:10px 20px;
+background:#00BFFF;
+color:white;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+}
+
+.button:hover{
+background:#009acd;
+box-shadow:0 0 10px rgba(0,191,255,0.5);
+}
 </style>
 </head>
 
@@ -251,7 +301,7 @@ display:flex;
 <p>Precision at Every Connection</p>
 </div>
 
-<section id="about">
+<section id="about" class="fade-in">
 
 <h2>About Us</h2>
 
@@ -263,7 +313,7 @@ efficiency, and deliver constructible digital models from LOD 100–500.
 
 </section>
 
-<section id="services">
+<section id="services" class="fade-in">
 
 <h2>Our Services</h2>
 
@@ -293,7 +343,7 @@ efficiency, and deliver constructible digital models from LOD 100–500.
 
 </section>
 
-<section id="portfolio">
+<section id="portfolio" class="fade-in">
 
 <h2>Project Portfolio</h2>
 
@@ -331,7 +381,7 @@ installation efficiency and site coordination.
 </div>
 
 </section>
-  <section id="case-studies">
+ <section id="case-studies" class="fade-in">
 
 <h2>Project Case Studies</h2>
 
@@ -412,7 +462,7 @@ accurate modeling, and smooth construction execution.
 </section>
   <img src="images/bim-workflow.png" style="width:100%; margin-top:30px; border-radius:10px;">
 
-<section id="insights">
+<section id="insights" class="fade-in">
 
 <h2>Engineering Insights</h2>
 
@@ -456,7 +506,7 @@ today's construction projects.
   
 </section>
 
-<section id="contact">
+<section id="contact" class="fade-in">
 
 <h2>Contact</h2>
 
@@ -489,6 +539,21 @@ Send Feedback
 function toggleMenu(){
 document.getElementById("navMenu").classList.toggle("show");
 }
+</script>
+  <script>
+
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll(".fade-in").forEach(el => {
+observer.observe(el);
+});
+
 </script>
 </body>
 </html>
