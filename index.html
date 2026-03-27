@@ -179,6 +179,39 @@ transition:0.3s;
 background:#009acd;
 transform:translateY(-2px);
 }
+  /* MOBILE MENU */
+
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+@media(max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+nav{
+display:none;
+flex-direction:column;
+width:100%;
+margin-top:10px;
+background:#081733;
+padding:10px;
+border-radius:8px;
+}
+
+nav a{
+margin:10px 0;
+}
+
+nav.show{
+display:flex;
+}
+
+}
 </style>
 </head>
 
@@ -188,7 +221,9 @@ transform:translateY(-2px);
 
 <div class="logo">VERTEXA<span>.</span></div>
 
-<nav>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav id="navMenu">
 
 <a href="#about">About</a>
 
@@ -450,7 +485,11 @@ Send Feedback
 © 2026 VERTEXA Digital Engineering
 
 </footer>
-
+<script>
+function toggleMenu(){
+document.getElementById("navMenu").classList.toggle("show");
+}
+</script>
 </body>
 </html>
 
