@@ -262,6 +262,39 @@ font-weight:600;
 background:#009acd;
 box-shadow:0 0 10px rgba(0,191,255,0.5);
 }
+  /* HERO PREMIUM */
+
+.hero{
+text-align:center;
+padding:140px 20px;
+background: linear-gradient(-45deg, #0A1F44, #0f2c66, #123d7a, #0A1F44);
+background-size: 400% 400%;
+animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.hero h1{
+font-size:56px;
+font-weight:700;
+letter-spacing:1px;
+}
+
+.hero p{
+font-size:22px;
+color:#00BFFF;
+margin-top:10px;
+}
+
+/* TEXT GLOW */
+
+.hero h1{
+text-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
 </style>
 </head>
 
@@ -296,7 +329,7 @@ box-shadow:0 0 10px rgba(0,191,255,0.5);
 
 </header>
 
-<div class="hero">
+<div class="hero fade-in">
 <h1>VERTEXA Digital Engineering</h1>
 <p>Precision at Every Connection</p>
 </div>
