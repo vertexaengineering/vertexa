@@ -295,6 +295,21 @@ margin-top:10px;
 .hero h1{
 text-shadow: 0 0 10px rgba(255,255,255,0.2);
 }
+  /* FIX DROPDOWN LAYER ISSUE */
+
+header{
+position: relative;
+z-index: 1000;
+}
+
+.dropdown-content{
+z-index: 2000;
+}
+
+.hero{
+position: relative;
+z-index: 1;
+}
 </style>
 </head>
 
